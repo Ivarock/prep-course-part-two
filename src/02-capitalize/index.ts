@@ -12,7 +12,9 @@
  */
 
 function capitalize(str: string) {
+    // Make an array for all separate words
     const words = str.split(' ');
+    // Loop through every word and capitalize the first letter then join it back with the rest of the word.
     for (let i = 0; i < words.length; i++) {
         words[i] = words[i][0].toUpperCase() + words[i].substring(1);
     }
