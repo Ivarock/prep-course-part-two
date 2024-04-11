@@ -6,7 +6,7 @@
 
 class HighScores {
   // Declare a property 'scores' for keeping scores in array
-  scores: number[];
+  private scores: number[];
   // Constructor function taking number array as input
   constructor(scores: number[]) {
     this.scores = scores;
