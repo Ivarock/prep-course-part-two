@@ -13,9 +13,20 @@
  */
 
 class Queue {
-  add(n: number) {}
-
-  remove() {}
+  // Declare a private property that stores elements in queue
+  private items: number[];
+  // Create an empty array called items
+  constructor() {
+    this.items = [];
+  }
+  // Add provided number into 'items' array
+  add(num: number): void {
+    this.items.push(num);
+  }
+  // Remove and return first element of 'items' array
+  remove(): number | undefined {
+    return this.items.shift();
+  }
 }
 
 export { Queue };
