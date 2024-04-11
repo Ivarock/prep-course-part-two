@@ -15,11 +15,21 @@
  */
 
 class Stack {
-  push(n: number) {}
+  // Array to store elements of stack
+  private elements: number[] = [];
 
-  pop() {}
-
-  peek() {}
+  // Method to add elements on top of stack
+  push(num: number) {
+    this.elements.push(num);
+  }
+  // Method to remove and return the top element of the stack
+  pop(): number | undefined {
+    return this.elements.pop();
+  }
+  // Method to return last element of stack, without removing it
+  peek(): number | undefined {
+    return this.elements[this.elements.length - 1];
+  }
 }
 
 export { Stack };
