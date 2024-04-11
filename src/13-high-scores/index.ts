@@ -5,21 +5,29 @@
  */
 
 class HighScores {
+  // Declare a property 'scores' for keeping scores in array
   scores: number[];
+  // Constructor function taking number array as input
   constructor(scores: number[]) {
     this.scores = scores;
   }
 
-  get latest() {
-    return 0;
+  // Define getter method 'latest' which returns number
+  get latest(): number {
+    // Return last element of 'scores' array
+    return this.scores[this.scores.length - 1];
   }
 
-  get personalBest() {
-    return 0;
+  get personalBest(): number {
+    // Return max value from 'scores' array
+    return Math.max(...this.scores);
   }
 
-  get personalTopThree() {
-    return 0;
+  get personalTopThree(): number[] {
+    // Copy of array before sorting
+    const sortedScores = [...this.scores];
+    // Sort the copy of an array in descending order and return first three elements
+    return sortedScores.sort((a: number, b: number) => b - a).slice(0, 3);
   }
 }
 
