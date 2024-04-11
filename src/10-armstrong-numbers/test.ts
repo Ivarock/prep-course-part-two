@@ -40,4 +40,8 @@ describe("ArmstrongNumber", () => {
     const input = 9926314;
     expect(validate(input)).toBe(false);
   });
+  test("Eleven digit number that is not an Armstrong number", () => {
+    const input = 30000000001;
+    expect(validate(input)).toBe(false);
+  });
 });
