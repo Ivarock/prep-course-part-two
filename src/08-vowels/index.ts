@@ -9,6 +9,11 @@
  * vowels('Hello there!') === 4
  */
 
-function vowels(s: string) {}
+function vowels(str: string): number {
+  //Using regEx to match vowels in string and save that string in a variable.
+  let vowelCount = str.match(/[aeiuo]/gi);
+  //Return the length of string with matched vowels, return 0 if there's none
+  return vowelCount === null ? 0 : vowelCount.length;
+}
 
 export { vowels };
