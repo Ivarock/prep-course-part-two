@@ -7,12 +7,12 @@
  */
 
 function parse(input: string): string {
-    // Extract letters from input using regular expression
-    const lettersOnly = input.match(/[a-zA-Z']+/g) || [];
-    // Extract first letters from words and capitalize them
-    const acronym = lettersOnly.map(word => word.charAt(0).toUpperCase());
-    // Join letters to form acronym
-    return acronym.join('');
+  // Extract letters from input using regular expression
+  const lettersOnly = input.match(/[a-zA-Z']+/g) || [];
+  // Extract first letters from words and capitalize them
+  const acronym = lettersOnly.map((word) => word.charAt(0).toUpperCase());
+  // Join letters to form acronym
+  return acronym.join("");
 }
 
 export { parse };
