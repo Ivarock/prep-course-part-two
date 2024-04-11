@@ -22,6 +22,31 @@
  * Resulting in 9 steps. So for input n = 12, the return value would be 9.
  */
 
-function steps(n: number) {}
+function steps(num: number) {
+  // Initiate counter to track steps
+  let counter = 0;
+  // Check if input is positive integer
+  if (num > 0 && Number.isInteger(num)) {
+    // Loop until reach 1
+    while (num !== 1) {
+      // Part for even digits
+      if (num % 2 === 0) {
+        num = num / 2;
+        // Increase counter after even digit
+        counter++;
+        // Part for odd digits
+      } else if (num % 2 === 1) {
+        num = num * 3 + 1;
+        // Increase counter after even digit
+        counter++;
+      }
+    }
+    // Return amount of steps needed to reach 1
+    return counter;
+  } else {
+    // Throw an error if input is not a positive number
+    throw new Error("Only positive numbers are allowed");
+  }
+}
 
 export { steps };
