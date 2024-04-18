@@ -20,11 +20,11 @@ class Queue {
     this.items = [];
   }
   // Add provided number into 'items' array
-  add(num: number): void {
+  add(num: number) {
     this.items.push(num);
   }
   // Remove and return first element of 'items' array
-  remove(): number | undefined {
+  remove() {
     return this.items.shift();
   }
 }

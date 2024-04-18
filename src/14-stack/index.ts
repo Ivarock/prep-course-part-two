@@ -23,11 +23,11 @@ class Stack {
     this.elements.push(num);
   }
   // Method to remove and return the top element of the stack
-  pop(): number | undefined {
+  pop() {
     return this.elements.pop();
   }
   // Method to return last element of stack, without removing it
-  peek(): number | undefined {
+  peek() {
     return this.elements[this.elements.length - 1];
   }
 }
