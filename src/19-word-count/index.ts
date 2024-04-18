@@ -16,7 +16,7 @@ class Words {
     // Create an object to store count of each word
     const wordCount: { [key: string]: number } = {};
     for (const word of words) {
-      // Filter out properties that exist on obect prototype
+      // Filter out properties that exist on object prototype
       if (!Object.prototype.hasOwnProperty.call(wordCount, word)) {
         // Increment the current word in wordcount object
           wordCount[word] = 1;
