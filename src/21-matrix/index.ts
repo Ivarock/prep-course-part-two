@@ -55,12 +55,12 @@ class Matrix {
   get columns() {
     const columns: number[][] = [];
     // Iterate over each column index
-    for (let colIndex = 0; colIndex < this.matrix[0].length; colIndex++) {
+    for (let i = 0; i < this.matrix[0].length; i++) {
       // Empty array to store current column
       const column: number[] = [];
       // Iterate over each row and extract the element at the current column index
       for (const row of this.matrix) {
-        column.push(row[colIndex]);
+        column.push(row[i]);
       }
       columns.push(column);
     }
